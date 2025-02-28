@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -144,46 +145,53 @@ namespace SistemaLanchonete
 
         private void numMussarela_ValueChanged(object sender, EventArgs e)
         {
-           // txtTotalMussarela.Text = ((int)numOvo.Value * decimal.Parse(txtValorUniOvo.Text)).ToString();
+            txtTotalMussarela.Text = ((int)numMussarela.Value * decimal.Parse(txtValorUniMussarela.Text)).ToString();
             totalLanche();
         }
 
         private void numBacon_ValueChanged(object sender, EventArgs e)
         {
-          //  txtTotalOvo.Text = ((int)numOvo.Value * decimal.Parse(txtValorUniOvo.Text)).ToString();
+            txtTotalBacon.Text = ((int)numBacon.Value * decimal.Parse(txtValorUniBacon.Text)).ToString();
             totalLanche();
         }
 
         private void numFrango_ValueChanged(object sender, EventArgs e)
         {
-            //txtTotalOvo.Text = ((int)numOvo.Value * decimal.Parse(txtValorUniOvo.Text)).ToString();
+            txtTotalFrango.Text = ((int)numFrango.Value * decimal.Parse(txtValorUniFrango.Text)).ToString();
             totalLanche();
         }
 
         private void numAlface_ValueChanged(object sender, EventArgs e)
         {
-          //  txtTotalOvo.Text = ((int)numOvo.Value * decimal.Parse(txtValorUniOvo.Text)).ToString();
+            txtTotalAlface.Text = ((int)numAlface.Value * decimal.Parse(txtValorUniAlface.Text)).ToString();
             totalLanche();
         }
 
         private void numTomate_ValueChanged(object sender, EventArgs e)
         {
-           // txtTotalOvo.Text = ((int)numOvo.Value * decimal.Parse(txtValorUniOvo.Text)).ToString();
+            txtTotalTomate.Text = ((int)numTomate.Value * decimal.Parse(txtValorUniTomate.Text)).ToString();
             totalLanche();
         }
 
         private void numMilhoVerde_ValueChanged(object sender, EventArgs e)
         {
-           // txtTotalOvo.Text = ((int)numOvo.Value * decimal.Parse(txtValorUniOvo.Text)).ToString();
+            txtTotalMilhoVerde.Text = ((int)numMilhoVerde.Value * decimal.Parse(txtValorUniMilhoVerde.Text)).ToString();
             totalLanche();
         }
 
         private void numErvilha_ValueChanged(object sender, EventArgs e)
         {
-           // txtTotalOvo.Text = ((int)numOvo.Value * decimal.Parse(txtValorUniOvo.Text)).ToString();
+            txtTotalErvilha.Text = ((int)numErvilha.Value * decimal.Parse(txtValorUniErvilha.Text)).ToString();
             totalLanche();
         }
 
+        private void btAdicionarLanche_Click(object sender, EventArgs e)
+        {
+            lbLaches.Items.Add("LANCHE" + lbLaches.Items.Count.ToString() + " : R$ " + somaLanche.ToString());
+            totalPedi += somaLanche;
+            txtValorPedido.Text = totalPedi.ToString();
+        }
+               
         private void cbMussarela_CheckedChanged(object sender, EventArgs e)
         {
             if (cbMussarela.Checked)

@@ -239,7 +239,6 @@
             this.txtTotalMussarela.TabIndex = 35;
             this.txtTotalMussarela.Text = "0,00";
             this.txtTotalMussarela.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-
             // 
             // txtTotalPresunto
             // 
@@ -651,6 +650,7 @@
             this.btAdicionarLanche.TabIndex = 22;
             this.btAdicionarLanche.Text = "Adicionar Lanche";
             this.btAdicionarLanche.UseVisualStyleBackColor = true;
+            this.btAdicionarLanche.Click += new System.EventHandler(this.btAdicionarLanche_Click);
             // 
             // gbPedido
             // 
