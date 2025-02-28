@@ -239,6 +239,7 @@
             this.txtTotalMussarela.TabIndex = 35;
             this.txtTotalMussarela.Text = "0,00";
             this.txtTotalMussarela.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+
             // 
             // txtTotalPresunto
             // 
@@ -402,83 +403,103 @@
             // 
             // numErvilha
             // 
+            this.numErvilha.Enabled = false;
             this.numErvilha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numErvilha.Location = new System.Drawing.Point(169, 367);
             this.numErvilha.Name = "numErvilha";
             this.numErvilha.Size = new System.Drawing.Size(50, 29);
             this.numErvilha.TabIndex = 19;
+            this.numErvilha.ValueChanged += new System.EventHandler(this.numErvilha_ValueChanged);
             // 
             // numMilhoVerde
             // 
+            this.numMilhoVerde.Enabled = false;
             this.numMilhoVerde.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numMilhoVerde.Location = new System.Drawing.Point(169, 332);
             this.numMilhoVerde.Name = "numMilhoVerde";
             this.numMilhoVerde.Size = new System.Drawing.Size(50, 29);
             this.numMilhoVerde.TabIndex = 18;
+            this.numMilhoVerde.ValueChanged += new System.EventHandler(this.numMilhoVerde_ValueChanged);
             // 
             // numTomate
             // 
+            this.numTomate.Enabled = false;
             this.numTomate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTomate.Location = new System.Drawing.Point(169, 298);
             this.numTomate.Name = "numTomate";
             this.numTomate.Size = new System.Drawing.Size(50, 29);
             this.numTomate.TabIndex = 17;
+            this.numTomate.ValueChanged += new System.EventHandler(this.numTomate_ValueChanged);
             // 
             // numAlface
             // 
+            this.numAlface.Enabled = false;
             this.numAlface.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numAlface.Location = new System.Drawing.Point(169, 262);
             this.numAlface.Name = "numAlface";
             this.numAlface.Size = new System.Drawing.Size(50, 29);
             this.numAlface.TabIndex = 16;
+            this.numAlface.ValueChanged += new System.EventHandler(this.numAlface_ValueChanged);
             // 
             // numFrango
             // 
+            this.numFrango.Enabled = false;
             this.numFrango.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numFrango.Location = new System.Drawing.Point(169, 225);
             this.numFrango.Name = "numFrango";
             this.numFrango.Size = new System.Drawing.Size(50, 29);
             this.numFrango.TabIndex = 15;
+            this.numFrango.ValueChanged += new System.EventHandler(this.numFrango_ValueChanged);
             // 
             // numBacon
             // 
+            this.numBacon.Enabled = false;
             this.numBacon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBacon.Location = new System.Drawing.Point(169, 190);
             this.numBacon.Name = "numBacon";
             this.numBacon.Size = new System.Drawing.Size(50, 29);
             this.numBacon.TabIndex = 14;
+            this.numBacon.ValueChanged += new System.EventHandler(this.numBacon_ValueChanged);
             // 
             // numMussarela
             // 
+            this.numMussarela.Enabled = false;
             this.numMussarela.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numMussarela.Location = new System.Drawing.Point(169, 154);
             this.numMussarela.Name = "numMussarela";
             this.numMussarela.Size = new System.Drawing.Size(50, 29);
             this.numMussarela.TabIndex = 13;
+            this.numMussarela.ValueChanged += new System.EventHandler(this.numMussarela_ValueChanged);
             // 
             // numPresunto
             // 
+            this.numPresunto.Enabled = false;
             this.numPresunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPresunto.Location = new System.Drawing.Point(169, 118);
             this.numPresunto.Name = "numPresunto";
             this.numPresunto.Size = new System.Drawing.Size(50, 29);
             this.numPresunto.TabIndex = 12;
+            this.numPresunto.ValueChanged += new System.EventHandler(this.numPresunto_ValueChanged);
             // 
             // numOvo
             // 
+            this.numOvo.Enabled = false;
             this.numOvo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numOvo.Location = new System.Drawing.Point(169, 82);
             this.numOvo.Name = "numOvo";
             this.numOvo.Size = new System.Drawing.Size(50, 29);
             this.numOvo.TabIndex = 11;
+            this.numOvo.ValueChanged += new System.EventHandler(this.numOvo_ValueChanged);
             // 
             // numHamburger
             // 
+            this.numHamburger.Enabled = false;
             this.numHamburger.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numHamburger.Location = new System.Drawing.Point(169, 45);
             this.numHamburger.Name = "numHamburger";
             this.numHamburger.Size = new System.Drawing.Size(50, 29);
             this.numHamburger.TabIndex = 10;
+            this.numHamburger.ValueChanged += new System.EventHandler(this.numHamburger_ValueChanged);
             // 
             // cbErvilha
             // 
@@ -490,6 +511,7 @@
             this.cbErvilha.TabIndex = 9;
             this.cbErvilha.Text = "Ervilha";
             this.cbErvilha.UseVisualStyleBackColor = true;
+            this.cbErvilha.CheckedChanged += new System.EventHandler(this.cbErvilha_CheckedChanged);
             // 
             // cbMilhoVerde
             // 
@@ -501,6 +523,7 @@
             this.cbMilhoVerde.TabIndex = 8;
             this.cbMilhoVerde.Text = "Milho Verde";
             this.cbMilhoVerde.UseVisualStyleBackColor = true;
+            this.cbMilhoVerde.CheckedChanged += new System.EventHandler(this.cbMilhoVerde_CheckedChanged);
             // 
             // cbTomate
             // 
@@ -512,6 +535,7 @@
             this.cbTomate.TabIndex = 7;
             this.cbTomate.Text = "Tomate";
             this.cbTomate.UseVisualStyleBackColor = true;
+            this.cbTomate.CheckedChanged += new System.EventHandler(this.cbTomate_CheckedChanged);
             // 
             // cbAlface
             // 
@@ -523,6 +547,7 @@
             this.cbAlface.TabIndex = 6;
             this.cbAlface.Text = "Alface";
             this.cbAlface.UseVisualStyleBackColor = true;
+            this.cbAlface.CheckedChanged += new System.EventHandler(this.cbAlface_CheckedChanged);
             // 
             // cbFrango
             // 
@@ -534,6 +559,7 @@
             this.cbFrango.TabIndex = 5;
             this.cbFrango.Text = "Frango";
             this.cbFrango.UseVisualStyleBackColor = true;
+            this.cbFrango.CheckedChanged += new System.EventHandler(this.cbFrango_CheckedChanged);
             // 
             // cbBacon
             // 
@@ -545,6 +571,7 @@
             this.cbBacon.TabIndex = 4;
             this.cbBacon.Text = "Bacon";
             this.cbBacon.UseVisualStyleBackColor = true;
+            this.cbBacon.CheckedChanged += new System.EventHandler(this.cbBacon_CheckedChanged);
             // 
             // cbMussarela
             // 
@@ -556,6 +583,7 @@
             this.cbMussarela.TabIndex = 3;
             this.cbMussarela.Text = "Mussarela";
             this.cbMussarela.UseVisualStyleBackColor = true;
+            this.cbMussarela.CheckedChanged += new System.EventHandler(this.cbMussarela_CheckedChanged);
             // 
             // cbPresunto
             // 
@@ -567,6 +595,7 @@
             this.cbPresunto.TabIndex = 2;
             this.cbPresunto.Text = "Presunto";
             this.cbPresunto.UseVisualStyleBackColor = true;
+            this.cbPresunto.CheckedChanged += new System.EventHandler(this.cbPresunto_CheckedChanged);
             // 
             // cbOvo
             // 
@@ -578,6 +607,7 @@
             this.cbOvo.TabIndex = 1;
             this.cbOvo.Text = "Ovo";
             this.cbOvo.UseVisualStyleBackColor = true;
+            this.cbOvo.CheckedChanged += new System.EventHandler(this.cbOvo_CheckedChanged);
             // 
             // cbHamburger
             // 
@@ -589,6 +619,7 @@
             this.cbHamburger.TabIndex = 0;
             this.cbHamburger.Text = "Hamburger";
             this.cbHamburger.UseVisualStyleBackColor = true;
+            this.cbHamburger.CheckedChanged += new System.EventHandler(this.cbHamburger_CheckedChanged);
             // 
             // label3
             // 
