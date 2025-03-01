@@ -191,7 +191,45 @@ namespace SistemaLanchonete
             totalPedi += somaLanche;
             txtValorPedido.Text = totalPedi.ToString();
         }
-               
+
+        private void txtValorRecebido_Enter(object sender, EventArgs e)
+        {
+            // Verifica se os valores digitados são válidos
+            decimal valorRecebido, valorPedido;
+
+            if (decimal.TryParse(txtValorRecebido.Text, out valorRecebido) &&
+                decimal.TryParse(txtValorPedido.Text, out valorPedido))
+            {
+                // Cálculo do troco
+                decimal troco = valorRecebido - valorPedido;
+
+                // Exibir no TextBox de troco
+                txtTroco.Text = troco.ToString("F2");
+            }
+        }
+
+        private void btFinalizarPedido_Click(object sender, EventArgs e)
+        {
+            // Verifica se os valores digitados são válidos
+            decimal valorRecebido, valorPedido;
+
+            if (decimal.TryParse(txtValorRecebido.Text, out valorRecebido) &&
+                decimal.TryParse(txtValorPedido.Text, out valorPedido))
+            {
+                // Cálculo do troco
+                decimal troco = valorRecebido - valorPedido;
+
+                // Exibir no TextBox de troco
+                txtTroco.Text = troco.ToString("F2");
+            }
+            else
+            {
+                // Exibe uma mensagem de erro se a conversão falhar
+                MessageBox.Show("Por favor, digite valores numéricos válidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
         private void cbMussarela_CheckedChanged(object sender, EventArgs e)
         {
             if (cbMussarela.Checked)

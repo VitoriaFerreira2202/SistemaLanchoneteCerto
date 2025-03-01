@@ -760,6 +760,7 @@
             this.txtValorRecebido.Size = new System.Drawing.Size(189, 29);
             this.txtValorRecebido.TabIndex = 35;
             this.txtValorRecebido.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtValorRecebido.Enter += new System.EventHandler(this.txtValorRecebido_Enter);
             // 
             // label8
             // 
@@ -811,6 +812,7 @@
             this.btFinalizarPedido.TabIndex = 48;
             this.btFinalizarPedido.Text = "Finalizar Pedido";
             this.btFinalizarPedido.UseVisualStyleBackColor = true;
+            this.btFinalizarPedido.Click += new System.EventHandler(this.btFinalizarPedido_Click);
             // 
             // frmPrincipal
             // 
