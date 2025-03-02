@@ -191,22 +191,39 @@ namespace SistemaLanchonete
             lbLaches.Items.Add("LANCHE" + lbLaches.Items.Count.ToString() + " : R$ " + somaLanche.ToString());
             totalPedi += somaLanche;
             txtValorPedido.Text = totalPedi.ToString();
-            Desabilitar();
+            Limpar();
+            Abilitar();
         }
-        private void Limpar() 
+
+        private void Abilitar()
         {
-            numAlface.Text = Clear;
-            numBacon.Text = Clear;
-            numErvilha.Text = Clear;
-            numFrango.Text = Clear;
-            numHamburger.Text = Clear;
-            numMilhoVerde.Text = Clear;
-            numMussarela.Text = Clear;
-            numOvo.Text = Clear;
-            numPresunto.Text = Clear;
-            numTomate.Text = Clear;
-        
+            
+            /* cbHamburger.Enabled = false;
+             cbOvo.Enabled = false;
+             cbPresunto.Enabled = true;
+             cbMussarela.Enabled = true;
+             cbBacon.Enabled = true;
+             cbFrango.Enabled = true;
+             cbAlface.Enabled = true;
+             cbTomate.Enabled = true;
+             cbMilhoVerde.Enabled = true;
+             cbErvilha.Enabled = true;*/
         }
+
+        private void Limpar()
+        {
+            numAlface.Value = 0;
+            numBacon.Value = 0;
+            numErvilha.Value = 0;
+            numFrango.Value = 0;
+            numHamburger.Value = 0;
+            numMilhoVerde.Value = 0;
+            numMussarela.Value = 0;
+            numOvo.Value = 0;
+            numPresunto.Value = 0;
+            numTomate.Value = 0;
+        }
+      
         private void txtValorRecebido_Enter(object sender, EventArgs e)
         {
             // Verifica se os valores digitados são válidos
