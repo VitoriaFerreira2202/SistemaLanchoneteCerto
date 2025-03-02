@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -190,8 +191,22 @@ namespace SistemaLanchonete
             lbLaches.Items.Add("LANCHE" + lbLaches.Items.Count.ToString() + " : R$ " + somaLanche.ToString());
             totalPedi += somaLanche;
             txtValorPedido.Text = totalPedi.ToString();
+            Desabilitar();
         }
-
+        private void Limpar() 
+        {
+            numAlface.Text = Clear;
+            numBacon.Text = Clear;
+            numErvilha.Text = Clear;
+            numFrango.Text = Clear;
+            numHamburger.Text = Clear;
+            numMilhoVerde.Text = Clear;
+            numMussarela.Text = Clear;
+            numOvo.Text = Clear;
+            numPresunto.Text = Clear;
+            numTomate.Text = Clear;
+        
+        }
         private void txtValorRecebido_Enter(object sender, EventArgs e)
         {
             // Verifica se os valores digitados são válidos
@@ -221,6 +236,7 @@ namespace SistemaLanchonete
 
                 // Exibir no TextBox de troco
                 txtTroco.Text = troco.ToString("F2");
+                
             }
             else
             {
